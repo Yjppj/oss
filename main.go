@@ -16,6 +16,7 @@ func main() {
 		zap.L().Error(fmt.Sprintf("init settings failed ,err:%v\n", err))
 		return
 	}
+
 	zap.L().Debug("viper init success...")
 	//初始化Zap
 	if err := logger.Init(initialize.Conf.LogConfig, initialize.Conf.Mode); err != nil {
