@@ -31,6 +31,7 @@ func main() {
 		zap.L().Error(fmt.Sprintf("init mysql failed ,err:%v\n", err))
 		return
 	}
+
 	r := routers.Setup(initialize.Conf.Mode)
 	r.Run(fmt.Sprintf(":%d", initialize.Conf.App.Port))
 }
